@@ -17,3 +17,5 @@ V
 &src/main/java/org/example/Casting.java,f\c\fc54e311e9b9b7c539c8e572bbf93ec9d76c796b
 X
 (src/main/java/org/example/Comparing.java,5\2\5277ca4b077a2713518ba182fd65fea32391cdd9
+X
+(src/main/java/org/example/Operators.java,f\2\f20f89839bd685957795da5562e224fb89e71b6d
