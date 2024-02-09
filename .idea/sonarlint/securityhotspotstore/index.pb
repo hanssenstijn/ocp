@@ -13,3 +13,5 @@ V
 &src/main/java/org/example/typeVar.java,f\5\f535fa5a5761a160c708085d105bddc2c39beb7a
 S
 #src/main/java/org/example/Fish.java,2\6\26ea8d7fddc0f8a2f3328b5700bdcb1217fea0ae
+V
+&src/main/java/org/example/Casting.java,f\c\fc54e311e9b9b7c539c8e572bbf93ec9d76c796b
