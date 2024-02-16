@@ -18,5 +18,13 @@ public class Operators {
         //If false: Skips the second ternary and directly assigns 5 to food2.
         int food2 = owl < 4 ? owl > 2 ? 3 : 4 : 5;
         System.out.println(food2);
+
+        int ph = 7, vis =2;
+        boolean safe =  (vis > 2) && (ph++ > 1);
+        System.out.println("ph safe : " + ph + " " + safe);
+        boolean notsafe =  vis > 2 && ph++ > 1;
+        System.out.println("ph notsafe : " + ph + " " + notsafe);
+        boolean notnotsafe =  (vis > 2 && ph++ > 1);
+        System.out.println("ph notsafe : " + ph + " " + notnotsafe);
     }
 }
