@@ -71,5 +71,10 @@ public class Casting {
         long deer = (int) 2;
         deer -= 1.0;
         System.out.println("deer : " + deer);
+
+        int note = 1;
+        short melody = (byte) (double) (note *=2);
+        // does not compile since type double is larger
+        // short melody2 = (double) (byte) (note *=2);
     }
 }
