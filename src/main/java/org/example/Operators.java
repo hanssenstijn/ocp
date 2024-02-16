@@ -26,5 +26,8 @@ public class Operators {
         System.out.println("ph notsafe : " + ph + " " + notsafe);
         boolean notnotsafe =  (vis > 2 && ph++ > 1);
         System.out.println("ph notsafe : " + ph + " " + notnotsafe);
+
+        // remainder of this is always 1
+        System.out.println(1 % 4);
     }
 }
