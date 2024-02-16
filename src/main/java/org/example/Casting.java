@@ -1,6 +1,15 @@
 package org.example;
 
 public class Casting {
+
+    static long addCandy(double fruit, float vegetables) {
+        return (int) (fruit + vegetables);
+    }
+    // does not compile, since vegetables is a float
+//    static long addCandy(double fruit, float vegetables) {
+//        return (int) (fruit) + vegetables;
+//    }
+
     public static void main(String[] args) {
         int fur = (int)5;
         int hair = (short) 10;
@@ -57,5 +66,10 @@ public class Casting {
         if(healthy = true) {
             System.out.println("Good!");
         }
+
+        // after the operation, the result is converted back to the type of the left-hand operand
+        long deer = (int) 2;
+        deer -= 1.0;
+        System.out.println("deer : " + deer);
     }
 }
