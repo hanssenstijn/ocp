@@ -21,3 +21,5 @@ X
 (src/main/java/org/example/Operators.java,f\2\f20f89839bd685957795da5562e224fb89e71b6d
 ^
 .src/main/java/org/example/PatternMatching.java,7\b\7b710b5ceb9a0308d3c024407b921a02352b51d5
+_
+/src/main/java/org/example/SwitchStatements.java,f\8\f8ccc9b1d53a5dbbf975d2ba63158a04dc677507
