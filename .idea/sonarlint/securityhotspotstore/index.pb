@@ -19,3 +19,5 @@ X
 (src/main/java/org/example/Comparing.java,5\2\5277ca4b077a2713518ba182fd65fea32391cdd9
 X
 (src/main/java/org/example/Operators.java,f\2\f20f89839bd685957795da5562e224fb89e71b6d
+^
+.src/main/java/org/example/PatternMatching.java,7\b\7b710b5ceb9a0308d3c024407b921a02352b51d5
