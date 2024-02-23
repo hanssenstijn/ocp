@@ -41,6 +41,17 @@ public class SwitchStatements {
         switch (month) {}
 
 
+        int fish = 5;
+        int length = 12;
+        var name = switch (fish) {
+            case 1 -> "x";
+            case 2 -> {yield "t";}
+            case 3 -> { if(length > 10) yield "b";
+            else yield "g";}
+            default -> "s";
+        };
+
+        multipleCases();
 
     }
     // break is optional!
@@ -77,9 +88,26 @@ public class SwitchStatements {
         }*/
     }
 
+    public void printDayOfWeekShort(int day) {
+        var result = switch (day) {
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            default -> "Invalid code";
+        };
+        System.out.println(result);
+    }
 
-
+    // do not need break in new switch statement, only first case will run
+    public static void multipleCases() {
+        int month = 3;
+        switch (month){
+            case 1, 2, 3 -> System.out.println("1,2,3");
+            case 4, 5, 6 -> System.out.println("4,5,6");
+        }
+    }
     int getCookies() {
         return 4;
     };
+
+
 }
