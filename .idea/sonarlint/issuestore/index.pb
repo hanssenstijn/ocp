@@ -23,3 +23,5 @@ X
 .src/main/java/org/example/PatternMatching.java,7\b\7b710b5ceb9a0308d3c024407b921a02352b51d5
 _
 /src/main/java/org/example/SwitchStatements.java,f\8\f8ccc9b1d53a5dbbf975d2ba63158a04dc677507
+T
+$src/main/java/org/example/Loops.java,b\4\b46e6789a560a47793c0110caf93ec22dfe8cfd5
