@@ -1,0 +1,68 @@
+
+K
+java:S1121B".Extract the assignment out of this expression.(™ô‘8‚¹ŒÛ1
+P
+java:S1121L".Extract the assignment out of this expression.(Æ‰«‘şÿÿÿÿ8‚¹ŒÛ1
+T
+java:S2589B"7Remove this expression which always evaluates to "true"(™ô‘8‹¹ŒÛ1
+X
+java:S1854B";Remove this useless assignment to local variable "healthy".(™ô‘8¹ŒÛ1
+U
+java:S1854:"8Remove this useless assignment to local variable "wolf".(ĞæÖÌ8¹ŒÛ1
+[
+java:S18548"9Remove this useless assignment to local variable "sheep".(í³«Áıÿÿÿÿ8¹ŒÛ1
+V
+java:S1854"9Remove this useless assignment to local variable "boots".(ºÇÓ8¹ŒÛ1
+W
+java:S1854":Remove this useless assignment to local variable "gloves".(™Ë†Ÿ8¹ŒÛ1
+Y
+java:S1854"<Remove this useless assignment to local variable "capybara".(ÖôÔÊ8¹ŒÛ1
+W
+java:S1854"5Remove this useless assignment to local variable "y".(Õ±«¥üÿÿÿÿ8¹ŒÛ1
+Z
+java:S1854"8Remove this useless assignment to local variable "hair".(Õ‹éõüÿÿÿÿ8¹ŒÛ1
+Y
+java:S1854"7Remove this useless assignment to local variable "fur".(ö‡Êııÿÿÿÿ8¹ŒÛ1
+\
+java:S1854L":Remove this useless assignment to local variable "melody".(Æ‰«‘şÿÿÿÿ8¹ŒÛ1
+]	java:S125	"<This block of commented-out lines of code should be removed.(ë®—…ûÿÿÿÿ8¹ŒÛ1
+H
+java:S1905"&Remove this unnecessary cast to "int".(ö‡Êııÿÿÿÿ8¹ŒÛ1
+J
+java:S1481"(Remove this unused "fur" local variable.(ö‡Êııÿÿÿÿ8¹ŒÛ1
+K
+java:S1481")Remove this unused "hair" local variable.(Õ‹éõüÿÿÿÿ8¹ŒÛ1
+H
+java:S1481"&Remove this unused "y" local variable.(Õ±«¥üÿÿÿÿ8¹ŒÛ1
+L	java:S106"+Replace this use of System.out by a logger.(µÏ…èùÿÿÿÿ8¹ŒÛ1
+X	java:S125"<This block of commented-out lines of code should be removed.(Ó‘áæ8¹ŒÛ1
+J
+java:S1481"-Remove this unused "capybara" local variable.(ÖôÔÊ8¹ŒÛ1
+H
+java:S1481"+Remove this unused "gloves" local variable.(™Ë†Ÿ8¹ŒÛ1
+G
+java:S1481"*Remove this unused "boots" local variable.(ºÇÓ8¹ŒÛ1
+]	java:S125 "<This block of commented-out lines of code should be removed.(‹¶íãúÿÿÿÿ8¹ŒÛ1
+L	java:S106$"+Replace this use of System.out by a logger.(æ¨¤šøÿÿÿÿ8¹ŒÛ1
+L	java:S106'"+Replace this use of System.out by a logger.(š—°øÿÿÿÿ8‘¹ŒÛ1
+G	java:S106*"+Replace this use of System.out by a logger.(Áß‡Ü8‘¹ŒÛ1
+G	java:S106-"+Replace this use of System.out by a logger.(¯ô¢ô8‘¹ŒÛ1
+X	java:S1250"<This block of commented-out lines of code should be removed.(ş£Ûº8’¹ŒÛ1
+G
+java:S14814"*Remove this unused "sheep" local variable.(ø‚©ê8’¹ŒÛ1
+]	java:S1256"<This block of commented-out lines of code should be removed.(Æ»±ÿüÿÿÿÿ8’¹ŒÛ1
+L	java:S106="+Replace this use of System.out by a logger.(¤èÛ­ÿÿÿÿÿ8’¹ŒÛ1
+L	java:S106>"+Replace this use of System.out by a logger.(Øƒåˆúÿÿÿÿ8’¹ŒÛ1
+N
+java:S1481@",Remove this unused "healthy" local variable.(Æ—ÇÛıÿÿÿÿ8“¹ŒÛ1
+G	java:S106C"+Replace this use of System.out by a logger.(Æ¥êÌ8“¹ŒÛ1
+C
+java:S1905G"&Remove this unnecessary cast to "int".(Àõû£8•¹ŒÛ1
+G	java:S106I"+Replace this use of System.out by a logger.(×ûÒ©8–¹ŒÛ1
+K
+java:S1481K")Remove this unused "note" local variable.(­ã°Áıÿÿÿÿ8–¹ŒÛ1
+K
+java:S1905L")Remove this unnecessary cast to "double".(Æ‰«‘şÿÿÿÿ8—¹ŒÛ1
+M
+java:S1481L"+Remove this unused "melody" local variable.(Æ‰«‘şÿÿÿÿ8—¹ŒÛ1
+]	java:S125N"<This block of commented-out lines of code should be removed.(ÿÉ€Şûÿÿÿÿ8©¼’ŒÛ1

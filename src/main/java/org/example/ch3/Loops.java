@@ -1,5 +1,6 @@
 package org.example.ch3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Loops {
@@ -45,6 +46,13 @@ public class Loops {
             hungryHippopotamus--;
             System.out.println(hungryHippopotamus + " hungryHippopotamus, ");
         }
+
+        List<Integer> myFavNum = new ArrayList<>();
+        myFavNum.add(10);
+        myFavNum.add(14);
+
+        for(Object c : myFavNum)
+            System.out.println("c : " + c);
 
     }
 

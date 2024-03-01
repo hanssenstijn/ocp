@@ -1,0 +1,19 @@
+
+>
+java:S1659"!Declare "vis" on a separate line.(éŞÙä8ÂÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(‚Óé©şÿÿÿÿ8ÃÒÆ†Û1
+;
+java:S2178"Correct this "&" to "&&".(‚Óé©şÿÿÿÿ8ÃÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(ŸëĞîüÿÿÿÿ8ÃÒÆ†Û1
+;
+java:S2178"Correct this "|" to "||".(ŸëĞîüÿÿÿÿ8ÃÒÆ†Û1
+G	java:S106
+"+Replace this use of System.out by a logger.(ˆÏÎú8ÃÒÆ†Û1
+G	java:S106"+Replace this use of System.out by a logger.(×³ª¨8ÄÒÆ†Û1
+f
+java:S3358"DExtract this nested ternary operation into an independent statement.(‡ƒÆÄøÿÿÿÿ8ÄÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(ó¢±¡üÿÿÿÿ8ÄÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(æËûÿÿÿÿ8ÄÒÆ†Û1
+G	java:S106"+Replace this use of System.out by a logger.(ĞÒğ8ÄÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(œ¬â«ûÿÿÿÿ8ÅÒÆ†Û1
+L	java:S106"+Replace this use of System.out by a logger.(ª•ñ­ıÿÿÿÿ8‡Â×ŠÛ1
