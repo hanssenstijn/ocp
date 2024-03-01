@@ -1,6 +1,6 @@
-package org.example;
+package org.example.ch3;
 
-public class FindInMatrix {
+public class FindInMatrix3 {
     public static void main(String[] args) {
         int[][] list = {{1,13},{5,2},{2,2}};
         int searchValue = 2;
@@ -11,7 +11,6 @@ public class FindInMatrix {
                 if(list[i][j]==searchValue) {
                     positionX=i;
                     positionY=j;
-                    break PARENT_LOOP;
                 }
             }
         }

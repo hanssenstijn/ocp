@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ch3;
 
 public class FindInMatrix2 {
     public static void main(String[] args) {

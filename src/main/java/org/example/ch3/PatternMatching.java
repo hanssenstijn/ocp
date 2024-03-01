@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ch3;
 
 public class PatternMatching {
     void compareIntegers(Number number) {

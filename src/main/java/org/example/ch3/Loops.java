@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ch3;
 
 import java.util.List;
 
