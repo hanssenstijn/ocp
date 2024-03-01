@@ -1,0 +1,9 @@
+
+\
+java:S2184"@Cast one of the operands of this addition operation to a "long".(Ì©ØQ8¡ÑâÎß1
+N
+java:S5261	"1Add explicit curly braces to avoid dangling else.(µÀøÒ8øÙãÎß1
+L	java:S106"+Replace this use of System.out by a logger.(€¿Óšüÿÿÿÿ8¥ÑâÎß1
+G	java:S106	"+Replace this use of System.out by a logger.(µÀøÒ8ùÙãÎß1
+L	java:S106
+"+Replace this use of System.out by a logger.(¹‡şşıÿÿÿÿ8ùÙãÎß1
