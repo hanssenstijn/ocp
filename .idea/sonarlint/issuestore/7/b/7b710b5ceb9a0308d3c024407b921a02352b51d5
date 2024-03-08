@@ -1,10 +1,0 @@
-
-k
-java:S3973 "IUse indentation to denote the code conditionally executed by this "else".(„¶áìøÿÿÿÿ8”×¤¦İ1
-L	java:S106"+Replace this use of System.out by a logger.(«Úƒ²ıÿÿÿÿ8Ó¢¦İ1
-L	java:S106"+Replace this use of System.out by a logger.(éí÷„ùÿÿÿÿ8Õ¢¦İ1
-]	java:S125"<This block of commented-out lines of code should be removed.(ò»£Æşÿÿÿÿ8Õ¢¦İ1
-L	java:S106"+Replace this use of System.out by a logger.(¾Øªäøÿÿÿÿ8Ö¢¦İ1
-8
-java:S3626"Remove this redundant jump.(ûÁİ…8œ×¤¦İ1
-L	java:S106!"+Replace this use of System.out by a logger.(¾Øªäøÿÿÿÿ8ë¤¦İ1

@@ -1,13 +1,16 @@
 
 j
 java:S2184
-"HCast one of the operands of this multiplication operation to a "double".(µßöêøÿÿÿÿ8«‚‰Ïß1
-G	java:S106"+Replace this use of System.out by a logger.(ï¨æ§8À‚‰Ïß1
-L	java:S106"+Replace this use of System.out by a logger.(æÐ½“øÿÿÿÿ8À‚‰Ïß1
-L	java:S106"+Replace this use of System.out by a logger.(´‹¹öþÿÿÿÿ8À‚‰Ïß1
-]	java:S125"<This block of commented-out lines of code should be removed.(š÷Äýÿÿÿÿ8Á‚‰Ïß1
-]	java:S125"<This block of commented-out lines of code should be removed.(çÂ¾¼ÿÿÿÿÿ8Á‚‰Ïß1
-]	java:S125$"<This block of commented-out lines of code should be removed.(¯ýÃ©üÿÿÿÿ8Á‚‰Ïß1
-L	java:S106/"+Replace this use of System.out by a logger.(¶‹·ÿÿÿÿÿ8Á‚‰Ïß1
-G	java:S1067"+Replace this use of System.out by a logger.(º—ï…8Á‚‰Ïß1
-G	java:S106="+Replace this use of System.out by a logger.(«‹Îõ8Â‚‰Ïß1
+"HCast one of the operands of this multiplication operation to a "double".(µßöêøÿÿÿÿ8Éá¥çá1
+G	java:S106"+Replace this use of System.out by a logger.(ï¨æ§8Ôá¥çá1
+L	java:S106"+Replace this use of System.out by a logger.(æÐ½“øÿÿÿÿ8Õá¥çá1
+L	java:S106"+Replace this use of System.out by a logger.(´‹¹öþÿÿÿÿ8Öá¥çá1
+]	java:S125"<This block of commented-out lines of code should be removed.(š÷Äýÿÿÿÿ8×á¥çá1
+]	java:S125"<This block of commented-out lines of code should be removed.(çÂ¾¼ÿÿÿÿÿ8×á¥çá1
+]	java:S125$"<This block of commented-out lines of code should be removed.(¯ýÃ©üÿÿÿÿ8×á¥çá1
+L	java:S106/"+Replace this use of System.out by a logger.(¶‹·ÿÿÿÿÿ8Øá¥çá1
+G	java:S1067"+Replace this use of System.out by a logger.(º—ï…8Üá¥çá1
+L	java:S106<"+Replace this use of System.out by a logger.(þÅ÷Ïþÿÿÿÿ8àá¥çá1
+E	java:S108B")Either remove or fill this block of code.(¿Šâò8áá¥çá1
+]	java:S125E"<This block of commented-out lines of code should be removed.(¶Íøÿÿÿÿ8…Ù¦çá1
+G	java:S106P"+Replace this use of System.out by a logger.(«‹Îõ8ãá¥çá1
