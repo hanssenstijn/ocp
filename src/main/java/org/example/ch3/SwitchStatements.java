@@ -53,6 +53,27 @@ public class SwitchStatements {
 
         multipleCases();
 
+        int dayday = 3;
+        switch (dayday) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            default:
+                System.out.println("Invalid number");
+        }
+
+        int daydayday = 3;
+
+        String dayName = switch(daydayday) {
+            case 1 -> "Sunday";
+            case 2 -> "Monday";
+            case 3 -> "Tuesday";
+            default -> "Invalid day number";
+        };
+
     }
     // break is optional!
     public void printDayOfWeek(int day) {
