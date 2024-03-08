@@ -54,6 +54,25 @@ public class Loops {
         for(Object c : myFavNum)
             System.out.println("c : " + c);
 
+        char[] wolf = {'w','b'};
+        int q = wolf.length;
+        for(;;) {
+            System.out.println(wolf[--q]);
+            if(q==0) break;
+        }
+
+        // all three sections  separated by semicolons are technically optional
+        int performers = -1;
+        for (;performers<2;performers+=2) {}
+
+        // snake is out of scope in the while condition
+/*        double iguana = 0;
+        do {
+            int snake = 1;
+            System.out.println(snake++ + " ");
+            iguana--;
+        } while (snake <=5);
+        System.out.println(iguana);*/
     }
 
     public void printNames(List<String> names) {
