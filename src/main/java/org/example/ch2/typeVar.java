@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ch2;
 
 public class typeVar {
     // var blabla = "does noet work here";

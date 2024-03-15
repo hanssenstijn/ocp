@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ch2;
 
 public class Comparing {
     public static void main(String[] args) {
