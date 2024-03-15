@@ -11,6 +11,17 @@ public class TextBlocks {
         System.out.println(x);
         TextBlocks.y();
 
+
+        // 3 characters, 3 lines
+        var block = """
+                a
+                b
+                c 
+                """;
+        System.out.println(block.length());
+        // add whitespace for each line thus plus 3
+        System.out.println(block.indent(1).length());
+        System.out.println(block.indent(2).length());
     }
     // \s keep the whitespace (next line)
     // \ skip the linebreak (same line)

@@ -44,18 +44,18 @@ public class Stringz {
         // System.out.println(x.charAt(7));
 
         System.out.println("indexof : " + x.indexOf('a'));
-        System.out.println("indexof fromindex : " + x.indexOf('a',4));
+        System.out.println("indexof fromindex : " + x.indexOf('a', 4));
         System.out.println("indexof : " + x.indexOf("al"));
-        System.out.println("indexof fromindex returns -1 if invalid : " + x.indexOf("al",5));
+        System.out.println("indexof fromindex returns -1 if invalid : " + x.indexOf("al", 5));
 
         System.out.println("substring : " + x.substring(3));
         // empty string
-        System.out.println("substring : " + x.substring(3,3));
+        System.out.println("substring : " + x.substring(3, 3));
         // exception
         // System.out.println("substring : " + x.substring(3,2));
-        System.out.println("substring : " + x.substring(3,4));
+        System.out.println("substring : " + x.substring(3, 4));
         // can include last letter
-        System.out.println("substring : " + x.substring(3,7));
+        System.out.println("substring : " + x.substring(3, 7));
         System.out.println("substring : " + x.substring(x.indexOf('l')));
 
         System.out.println("toUpperCase : " + x.toUpperCase());
@@ -66,6 +66,7 @@ public class Stringz {
         System.out.println("equalsIgnoreCase : " + "abc".equalsIgnoreCase("ABC"));
         System.out.println("equals : " + "ABC".equals("ABC"));
 
+        // its camelcase sensitive
         System.out.println("startsWith : " + "abc".startsWith("a"));
         System.out.println("startsWith : " + "abc".startsWith("A"));
         System.out.println("endsWith : " + "abc".endsWith("C"));
@@ -73,7 +74,26 @@ public class Stringz {
         System.out.println("contains : " + "abc".contains("b"));
         System.out.println("contains : " + "abc".contains("B"));
 
-        System.out.println("replace : " + "abcabc".replace('a','A'));
-        System.out.println("replace : " + "abcabc".replace("a","A"));
+        System.out.println("replace : " + "abcabc".replace('a', 'A'));
+        System.out.println("replace : " + "abcabc".replace("a", "A"));
+
+        String y = "\t a b c \n";
+        // remove whitespaces, also includes (\t \n \r)
+        System.out.println("trim : " + y.trim());
+        System.out.println("strip : " + y.strip());
+        // remove at the beginning, so still include the whitespace \n
+        System.out.println("stripLeading : " + y.stripLeading());
+        // remove at the end, so still include the \t
+        System.out.println("stripTrailing : " + y.stripTrailing());
+
+        var str = "1\\t2";
+        System.out.println(str);
+        System.out.println("translateEscapes : " + str.translateEscapes());
+
+        System.out.println("isEmpty : " + " ".isEmpty());
+        System.out.println("isEmpty : " + "".isEmpty());
+        System.out.println("isBlank : " + " ".isBlank());
+        System.out.println("isBlank : " + "".isBlank());
+
     }
 }
