@@ -33,5 +33,20 @@ public class PatternMatching {
         System.out.println(data.intValue());
     }
 
+    // does not compile since using the same name
+/*    void getFish(Object fish) {
+        if(!(fish instanceof String guppy))
+            System.out.println("Eat");
+        else if(!(fish instanceof String guppy))
+            throw new RuntimeException();
+    }*/
+
+    // instanceof checks if the String has the exact value guppy or juppy
+    void getFish(Object fish) {
+        if(!(fish instanceof String guppy))
+            System.out.println("Eat");
+        else if(!(fish instanceof String juppy))
+            throw new RuntimeException();
+    }
 
 }
