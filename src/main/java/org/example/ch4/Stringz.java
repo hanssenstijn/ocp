@@ -95,5 +95,70 @@ public class Stringz {
         System.out.println("isBlank : " + " ".isBlank());
         System.out.println("isBlank : " + "".isBlank());
 
+        var kate = "kate";
+        var orderId = 5;
+
+        System.out.println(String.format("Hello %s, order %d is ready",kate,orderId));
+        System.out.println(String.format("Hello %s, order %n %d is ready",kate,orderId));
+        System.out.println("Hello %s, order %d is ready".formatted(kate,orderId));
+
+        var james = "james";
+        var score = 90.25;
+        var total = 100;
+
+        System.out.println("%s: %n   Score: %f out of %d".formatted(james,score,total));
+        System.out.println("%s: %n   Score: %.1f out of %d".formatted(james,score,total));
+        System.out.println("%s: %n   Score: %.2f out of %d".formatted(james,score,total));
+
+        // IllegalFOrmatConversionExeption
+        // var strstr = "Food %d tons".formatted(2.0);
+
+        var pi = 3.14159265359;
+        System.out.println(String.format("[%f]",pi));
+        System.out.println(String.format("[%12.8f]",pi));
+        System.out.println(String.format("[%012f]",pi));
+
+        String result = "AniMaL     ".trim().toLowerCase().replace('a','A');
+        System.out.println(result);
+
+        String b = "abc".toUpperCase();
+        b = b.replace("B","2").replace("C","3");
+        System.out.println(b);
+
+        // only one object, since once new StringBuilder
+        StringBuilder a = new StringBuilder("abc");
+        StringBuilder c = a.append("de");
+        c = c.append("f").append("g");
+        System.out.println("StringBuilder : " + a);
+        System.out.println("StringBuilder : " + c);
+
+        // empty one
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder("abc");
+        // capacity
+        StringBuilder sb3 = new StringBuilder(10);
+
+        var sb = new StringBuilder("animals");
+        String sub = sb.substring(sb.indexOf("a"),sb.indexOf("al"));
+        int len = sb.length();
+        char ch = sb.charAt(6);
+        System.out.println(sub + " " + len + " " + ch);
+
+        // convert directly to string
+        var sb4 = new StringBuilder().append(1).append('c');
+        sb4.append("-").append(true);
+        System.out.println(sb4);
+
+        sb.insert(7,"-");
+        System.out.println(sb);
+        sb.insert(0,"-");
+        System.out.println(sb);
+        sb.insert(4,"-");
+        System.out.println(sb);
+
+        sb.delete(1,3);
+        System.out.println(sb);
+        // exception index out of bounds
+        // sb.deleteCharAt(10);
     }
 }
