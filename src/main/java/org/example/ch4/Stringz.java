@@ -157,8 +157,44 @@ public class Stringz {
         System.out.println(sb);
 
         sb.delete(1,3);
+        // can also be out of array index
+        sb.delete(1,100);
         System.out.println(sb);
         // exception index out of bounds
         // sb.deleteCharAt(10);
-    }
+
+        var builder = new StringBuilder("pigeon dirty");
+        builder.replace(3,6,"sty");
+        System.out.println("replace : " + builder);
+
+        builder.reverse();
+        System.out.println("reverse : " + builder);
+
+        String sss = builder.toString();
+        System.out.println("toString : " + sss);
+
+        var one = new StringBuilder();
+        var two = new StringBuilder();
+        var five = one.append("a");
+        System.out.println("== StringBuilder : " + (one == two));
+        System.out.println("== StringBuilder : " + (one == five));
+
+        var xy = "Hello world";
+        var yx = " Hello world".trim();
+        System.out.println("equals : " + xy.equals(yx));
+        System.out.println("== : " + xy == yx);
+        // tell the jvm to make use of the string pool (use object from here if present) therefor true now
+        System.out.println("intern() : " + xy == yx.intern());
+
+        var d = "d";
+        var e = new StringBuilder(d);
+        // compilation error, since two different types
+        // System.out.println(d == e);
+
+        var first = "ab";
+        var second = new String("ab");
+        System.out.println("new String() : " + first == second);
+
+
+   }
 }
