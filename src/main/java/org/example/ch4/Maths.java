@@ -22,7 +22,9 @@ public class Maths {
         double squared = Math.pow(5,2);
         System.out.println("pow : " + squared);
 
-
+        // generate number greater than or equal to 0 and smaller to 1
+        double numnum = Math.random();
+        System.out.println("random : " + numnum);
     }
 
 }
