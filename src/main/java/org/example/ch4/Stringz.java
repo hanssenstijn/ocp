@@ -203,5 +203,10 @@ public class Stringz {
         builder.replace(2,4,"5").charAt(2);
         // not s.length
         s.length();
+
+        var numbers = "012345678".indent(1);
+        System.out.println("indent : " + numbers);
+        numbers = numbers.stripLeading();
+        System.out.println("stripLeading : " + numbers);
    }
 }

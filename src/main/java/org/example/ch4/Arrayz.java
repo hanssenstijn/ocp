@@ -122,5 +122,17 @@ public class Arrayz {
 
         java.util.Date[] dates[] = new java.util.Date[2][];
 
+        String[] s1 = {"Camel","Peacock","Llama"};
+        String[] s2 = {"Camel","Llama","Peacock"};
+        System.out.println("compare : " + Arrays.compare(s1,s2));
+        System.out.println("compare : " + Arrays.mismatch(s1,s2));
+
+        // mismatch returns positve integer when the arrays are different in a position index 1 or greater
+        String[] s3 = {"Peacock","Camel","Llama"};
+        String[] s4 = {"Camel","Peacock","Llama"};
+        System.out.println("compare : " + Arrays.compare(s3,s4));
+        System.out.println("compare : " + Arrays.mismatch(s3,s4));
+
+
     }
 }

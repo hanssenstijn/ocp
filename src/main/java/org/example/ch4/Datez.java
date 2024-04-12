@@ -100,7 +100,6 @@ public class Datez {
         System.out.println("between toMillis : " + duration.toMillis());
 
 
-
     }
 
     private static void performAnimalEnrichment(LocalDate start, LocalDate end, Period period) {
