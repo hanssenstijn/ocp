@@ -25,6 +25,12 @@ public class Maths {
         // generate number greater than or equal to 0 and smaller to 1
         double numnum = Math.random();
         System.out.println("random : " + numnum);
+
+        // does not compile, since return is a double
+        // float three = Math.random();
+
+        // does not compile, since return is a long
+        // int two = Math.round(1.0);
     }
 
 }

@@ -195,6 +195,13 @@ public class Stringz {
         var second = new String("ab");
         System.out.println("new String() : " + first == second);
 
+        var ssss = "Hello";
+        var t = new String(ssss);
+        System.out.println("intern() : " + t.intern()==ssss);
 
+        
+        builder.replace(2,4,"5").charAt(2);
+        // not s.length
+        s.length();
    }
 }

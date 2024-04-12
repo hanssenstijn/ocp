@@ -119,5 +119,8 @@ public class Arrayz {
                 System.out.println(num + " ");
                 System.out.println();
         }
+
+        java.util.Date[] dates[] = new java.util.Date[2][];
+
     }
 }
