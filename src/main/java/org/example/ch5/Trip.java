@@ -11,5 +11,6 @@ public class Trip {
     // change order does compile
     public void visitZoo(int name2, String waitTime2) {}
 
-
+    public void oneException() throws IllegalArgumentException {}
+    public void twoException() throws IllegalArgumentException, InterruptedException {}
 }
