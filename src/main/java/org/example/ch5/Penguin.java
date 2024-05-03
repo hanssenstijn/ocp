@@ -18,6 +18,23 @@ public class Penguin {
     private static final int NUM_BUCKETS = 45;
     private static final String[] treats = new String[10];
 
+    int quack = 5;
+    // convert int to Integer
+    Integer quackquack = Integer.valueOf(quack);
+    // convert Integer to int
+    int quackquackquack = quackquack.intValue();
+    // autoboxing
+    Integer quackquackquackquack = quack;
+    // unboxing
+    int quackquackquackquackquackquack = quackquackquackquack;
+
+    // does not compile since it can be autoboxed to long or Integer
+    // Long badGorilla = 8;
+
+    Character elephant = null;
+    // results in nullpointerexception
+    // char badElephant = elephant;
+
     public static void main(String[] args) {
         // treats = reference variable. we are allowed to modify the referenced object or array's contents.
         treats[0] = "popcorn";
@@ -60,6 +77,13 @@ public class Penguin {
         speak2(name2);
         // prints WebbeyGeorgette
         System.out.println(name2);
+
+        climb(123);
+        swin(123);
+        // does not compile since java will not automatically convert to a narrower type
+        // jump(123L);
+        // does not compile since java will not cast and autobox at the same time
+        // rest(8);
     }
 
     private static void speak2(StringBuilder name2) {
@@ -93,4 +117,9 @@ public class Penguin {
     public static void fifth() {
         System.out.println("fifth");
     }
+
+    public static void climb(long t) {}
+    public static void swin(Integer u) {}
+    public static void jump(int v){}
+    public static void rest(Long x) {}
 }
