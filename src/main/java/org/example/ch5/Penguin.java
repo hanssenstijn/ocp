@@ -12,7 +12,20 @@ public class Penguin {
     // static final double height;
     // bamboo does compile since static block initializes (with value)
     static final int bamboo;
-    static { bamboo = 5;}
+    static int bamboo2;
+    // static final cannot be initialized in a instance block therefor compiler error
+    // static final int bamboo3;
+    int check;
+    int check2;
+    static { bamboo = 5;
+    // check = 5; --> cannot be initialized here since static block only has access to static var
+    }
+
+    {
+        bamboo2 = 6;
+        check2 = 4;
+        // bamboo3 = 3;
+    }
     static String nameOfTallestPeguin;
     String name;
     private static final int NUM_BUCKETS = 45;
