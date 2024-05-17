@@ -1,6 +1,10 @@
 package org.example.ch6;
 
 public class Animal {
+    static {
+        System.out.println("A");
+    }
+
     protected String name;
     private int age;
 
