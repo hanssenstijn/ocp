@@ -4,6 +4,11 @@ public class Animal {
     protected String name;
     private int age;
 
+    public Animal(int age) {
+        super();
+        this.age = age;
+    }
+
     public int getAge() {
         return age;
     }
