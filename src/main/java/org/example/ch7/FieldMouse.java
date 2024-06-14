@@ -6,4 +6,9 @@ public class FieldMouse implements Climb,CanBurrow{
     public Float getSpeed(int age) {
         return null;
     }
+
+    @Override
+    public Float getSpeed2(int age) {
+        return null;
+    }
 }
