@@ -111,15 +111,49 @@ public class Collections {
         String[] stringArray = list.toArray(new String[0]);
         System.out.println("objectArray.length : " + objectArray.length);
 
-        Set<Character> letters = Set.of('z','o','o');
+        Set<Character> letters = Set.of('z','o','p');
         Set<Character> copySet = Set.copyOf(letters);
 
         Set<Integer> set5 = new HashSet<>();
+        set5.add(100);
         set5.add(10);
         set5.add(1);
         // duplicate element not allowed
         // set5.add(10);
+        // print out in no order
         set5.forEach(System.out::println);
+
+        Set<Integer> set6 = new TreeSet<>();
+        set6.add(100);
+        set6.add(10);
+        set6.add(1);
+        // print out in natural order
+        set6.forEach(System.out::println);
+
+
+        // Queue
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(4);
+        queue.add(1);
+        // remove from front
+        System.out.println("queue.remove() : " + queue.remove());
+        System.out.println("queue.peek() : " + queue.peek());
+
+        Deque<Integer> deque = new LinkedList<>();
+        deque.offerFirst(10);
+        deque.offerLast(5);
+        deque.offerLast(4);
+        System.out.println("deque : " + deque);
+        // read
+        System.out.println(deque.peekFirst());
+        // remove
+        deque.pollFirst();
+        System.out.println("deque : " + deque);
+        deque.pollLast();
+        System.out.println("deque : " + deque);
+        // results to null
+        deque.pollFirst();
 
 
     }
