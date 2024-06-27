@@ -1,8 +1,9 @@
 package org.example.ch9;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
-public class Collections {
+public class Collectionz {
     public static void main(String[] args) {
         List<String> list = new ArrayList<String>();
         List<Integer> list2 = new ArrayList<>();
@@ -49,21 +50,21 @@ public class Collections {
         set2.removeIf(String::isEmpty);
         System.out.println("set2.removeIf(String::isEmpty) : " + set2);
 
-        Collection<String> cats = List.of("Annie","Ripley");
+        Collection<String> cats = List.of("Annie", "Ripley");
         cats.forEach(System.out::println);
         cats.forEach(c -> System.out.println(c));
 
-        var list4 = List.of(1,2);
-        var list5 = List.of(2,1);
-        var set3 = Set.of(1,2);
-        var set4 = Set.of(2,1);
+        var list4 = List.of(1, 2);
+        var list5 = List.of(2, 1);
+        var set3 = Set.of(1, 2);
+        var set4 = Set.of(2, 1);
         // order is important
         System.out.println("list4.equals(list5) : " + list4.equals(list5));
         System.out.println("set3.equals(set4) : " + set3.equals(set4));
         // false since types are different
         System.out.println("list4.equals(set3) : " + list4.equals(set3));
 
-        String[] array = new String[] {"a","b","c"};
+        String[] array = new String[]{"a", "b", "c"};
         List<String> asList = Arrays.asList(array);
         List<String> of = List.of(array);
         List<String> copy = List.copyOf(asList);
@@ -78,7 +79,7 @@ public class Collections {
         System.out.println("of : " + of);
         System.out.println("copy : " + copy);
 
-        asList.set(0,"x");
+        asList.set(0, "x");
         System.out.println("asList : " + asList);
 
         // create one with defaults
@@ -94,24 +95,24 @@ public class Collections {
         List<String> list9 = new ArrayList<>();
         list9.add("SD");
         System.out.println(list9);
-        list9.add(0,"NY");
+        list9.add(0, "NY");
         System.out.println(list9);
-        list9.set(1,"FL");
+        list9.set(1, "FL");
         System.out.println(list9);
         System.out.println(list9.get(0));
         list9.remove("NY");
         list9.remove(0);
         System.out.println(list9);
 
-        var numbers = Arrays.asList(1,2,3);
-        numbers.replaceAll(x -> x*2);
+        var numbers = Arrays.asList(1, 2, 3);
+        numbers.replaceAll(x -> x * 2);
         System.out.println(numbers);
 
         Object[] objectArray = list.toArray();
         String[] stringArray = list.toArray(new String[0]);
         System.out.println("objectArray.length : " + objectArray.length);
 
-        Set<Character> letters = Set.of('z','o','p');
+        Set<Character> letters = Set.of('z', 'o', 'p');
         Set<Character> copySet = Set.copyOf(letters);
 
         Set<Integer> set5 = new HashSet<>();
@@ -155,6 +156,58 @@ public class Collections {
         // results to null
         deque.pollFirst();
 
+        Map<String, String> map = new HashMap<>(Map.of("key1", "value1", "key2", "value2"));
+        Map<String, String> stringMap = Map.ofEntries(Map.entry("key1", "value1"),
+                Map.entry("key2", "value2"));
+
+        System.out.println("map.containsKey(\"key1\") : " + map.containsKey("key1"));
+        System.out.println("map.containsValue(\"value1\") ; " + map.containsValue("value1"));
+        System.out.println("map.entrySet() : " + map.entrySet());
+        System.out.println("map.get(\"key1\") : " + map.get("key1"));
+        System.out.println("map.isEmpty() : " + map.isEmpty());
+        System.out.println("map.keySet() : " + map.keySet());
+        System.out.println("map.put(\"key1\",\"valuePut\") : " + map.put("key1","valuePut"));
+        System.out.println(map.entrySet());
+        System.out.println("map.putIfAbsent(\"key3\",\"value3\") : " + map.putIfAbsent("key3","value3"));
+        System.out.println(map.entrySet());
+        System.out.println("map.remove(\"key1\") : "  + map.remove("key1"));
+        System.out.println(map.entrySet());
+        System.out.println(map.replace("key3","valueReplace"));
+        System.out.println(map.entrySet());
+        System.out.println("map.size() : " + map.size());
+        System.out.println("map.values() : " + map.values());
+
+        Map<String,String> map2 = new HashMap<>();
+        map2.put("koala","bamboo");
+        map2.put("lion","meat");
+        map2.put("giraffe","leaf");
+        String food = map2.get("koala");
+        System.out.println(food);
+        for(String key : map2.keySet())
+            System.out.println(key + ", ");
+
+        // does not compile, method not for map only for collections
+        // map.contains("lion");
+
+        map2.clear();
+        System.out.println("map2.size() : " + map2.size());
+
+        map.forEach((k,v) -> System.out.println(v));
+        map.values().forEach(System.out::println);
+        map.entrySet().forEach(e -> System.out.println(e.getKey() + " " + e.getValue()));
+        System.out.println("map.getOrDefault(\"x\",\"default\") : " + map.getOrDefault("x","default"));
+
+        BiFunction<String,String,String> mapper = (v1,v2) -> v1.length() > v2.length() ? v1 : v2;
+
+        Map<String, String> favorites = new HashMap<>();
+        favorites.put("Jenny","Bus Tour");
+        favorites.put("Tom","Tram");
+
+        String jenny = favorites.merge("Jenny","Skyride",mapper);
+        String tom = favorites.merge("Tom","Skyride",mapper);
+
+        System.out.println(jenny);
+        System.out.println(tom);
 
     }
 }
