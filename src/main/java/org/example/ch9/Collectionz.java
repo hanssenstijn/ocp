@@ -209,5 +209,10 @@ public class Collectionz {
         System.out.println(jenny);
         System.out.println(tom);
 
+        Map m = new HashMap();
+        m.put(123,"456");
+        m.put("abc","def");
+        System.out.println(m.containsValue(123));
+
     }
 }
