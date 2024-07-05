@@ -96,5 +96,13 @@ public class Streamz {
         Map<Integer, Set<String>> map = ohMy2.collect(Collectors.groupingBy(String::length,Collectors.toSet()));
         System.out.println(map);
 
-            }
+        Stream<Integer> evenNumbers = Stream.iterate(0, n -> n + 2);
+        evenNumbers.forEach(System.out::println);
+
+        var iterateStream = Stream.iterate("", (q) -> q + "1");
+        System.out.println(iterateStream.limit(2).map(x -> x + "2"));
+
+        var generateStream = Stream.generate(() -> "growl!");
+
+    }
 }
