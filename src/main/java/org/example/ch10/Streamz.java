@@ -45,7 +45,7 @@ public class Streamz {
         Stream<String> s5 = Stream.of("monkey", "gorilla", "bonobo");
         s5.filter(x -> x.startsWith("g")).forEach(System.out::println);
 
-        Stream<String> s6 = Stream.of("duck","duck","duck","goose");
+        Stream<String> s6 = Stream.of("duck", "duck", "duck", "goose");
         s6.distinct().forEach(System.out::println);
 
         Stream<String> s7 = Stream.of("monkey", "gorilla", "bonobo");
@@ -54,19 +54,22 @@ public class Streamz {
         List<String> zero = List.of();
         var one = List.of("Bonobo");
         var two = List.of("Mama Gorilla", "Baby Gorilla");
-        Stream<List<String>> animals = Stream.of(zero,one,two);
+        Stream<List<String>> animals = Stream.of(zero, one, two);
         animals.flatMap(m -> m.stream()).forEach(System.out::println);
 
-        Stream<String> s8 = Stream.of("duck","duck","duck","goose");
+        Stream<String> s8 = Stream.of("duck", "duck", "duck", "goose");
         Stream<String> s9 = Stream.of("monkey", "gorilla", "bonobo");
 
-        Stream.concat(s8,s9).forEach(System.out::println);
+        Stream.concat(s8, s9).forEach(System.out::println);
 
-        Stream<String> s10 = Stream.of("brown-","bear-");
+        Stream<String> s10 = Stream.of("brown-", "bear-");
         s10.sorted().forEach(System.out::println);
 
-        Stream<String> s11 = Stream.of("brown-","bear-","grizzly-");
+        Stream<String> s11 = Stream.of("brown-", "bear-", "grizzly-");
         s11.sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+        var listlist = List.of("Toby", "Anna", "Leroy", "Alex");
+        listlist.stream().filter(n -> n.length() == 4).sorted().limit(2).forEach(System.out::println);
 
 
     }
