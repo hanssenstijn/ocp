@@ -1,10 +1,8 @@
 package org.example.ch10;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 public class Streamz {
     public static void main(String[] args) {
@@ -71,6 +69,32 @@ public class Streamz {
         var listlist = List.of("Toby", "Anna", "Leroy", "Alex");
         listlist.stream().filter(n -> n.length() == 4).sorted().limit(2).forEach(System.out::println);
 
+        Stream<Integer> integerStream = Stream.of(1,2,3);
+        System.out.println(integerStream.mapToInt(x -> x).sum());
 
-    }
+        DoubleStream doubleStream = DoubleStream.of(1.0,1.1,1.2);
+        System.out.println("doubleStream.average() : " + doubleStream.average());
+
+        Stream<String> objStream = Stream.of("penguin","fish");
+        IntStream intStream = objStream.mapToInt(x -> x.length());
+        intStream.forEach(System.out::println);
+
+        LongStream longStream = LongStream.of(5,10);
+        long sum = longStream.sum();
+        System.out.println("longStream.sum() : " + sum);
+
+        var streamList = List.of("Toby", "Anna", "Leroy", "Alex");
+        Spliterator<String> originalList = streamList.spliterator();
+        Spliterator<String> splitList = originalList.trySplit();
+        splitList.forEachRemaining(System.out::println);
+
+        var ohMy = Stream.of("lions","tigers","bears");
+        String result = ohMy.collect(Collectors.joining(", "));
+        System.out.println(result);
+
+        var ohMy2 = Stream.of("lions","tigers","bears");
+        Map<Integer, Set<String>> map = ohMy2.collect(Collectors.groupingBy(String::length,Collectors.toSet()));
+        System.out.println(map);
+
+            }
 }
