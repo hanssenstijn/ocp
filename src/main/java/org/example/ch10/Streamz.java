@@ -69,17 +69,17 @@ public class Streamz {
         var listlist = List.of("Toby", "Anna", "Leroy", "Alex");
         listlist.stream().filter(n -> n.length() == 4).sorted().limit(2).forEach(System.out::println);
 
-        Stream<Integer> integerStream = Stream.of(1,2,3);
+        Stream<Integer> integerStream = Stream.of(1, 2, 3);
         System.out.println(integerStream.mapToInt(x -> x).sum());
 
-        DoubleStream doubleStream = DoubleStream.of(1.0,1.1,1.2);
+        DoubleStream doubleStream = DoubleStream.of(1.0, 1.1, 1.2);
         System.out.println("doubleStream.average() : " + doubleStream.average());
 
-        Stream<String> objStream = Stream.of("penguin","fish");
+        Stream<String> objStream = Stream.of("penguin", "fish");
         IntStream intStream = objStream.mapToInt(x -> x.length());
         intStream.forEach(System.out::println);
 
-        LongStream longStream = LongStream.of(5,10);
+        LongStream longStream = LongStream.of(5, 10);
         long sum = longStream.sum();
         System.out.println("longStream.sum() : " + sum);
 
@@ -88,21 +88,53 @@ public class Streamz {
         Spliterator<String> splitList = originalList.trySplit();
         splitList.forEachRemaining(System.out::println);
 
-        var ohMy = Stream.of("lions","tigers","bears");
+        var ohMy = Stream.of("lions", "tigers", "bears");
         String result = ohMy.collect(Collectors.joining(", "));
         System.out.println(result);
 
-        var ohMy2 = Stream.of("lions","tigers","bears");
-        Map<Integer, Set<String>> map = ohMy2.collect(Collectors.groupingBy(String::length,Collectors.toSet()));
+        var ohMy2 = Stream.of("lions", "tigers", "bears");
+        Map<Integer, Set<String>> map = ohMy2.collect(Collectors.groupingBy(String::length, Collectors.toSet()));
         System.out.println(map);
 
-        Stream<Integer> evenNumbers = Stream.iterate(0, n -> n + 2);
-        evenNumbers.forEach(System.out::println);
+        //Stream<Integer> evenNumbers = Stream.iterate(0, n -> n + 2);
+        //evenNumbers.forEach(System.out::println);
 
         var iterateStream = Stream.iterate("", (q) -> q + "1");
         System.out.println(iterateStream.limit(2).map(x -> x + "2"));
 
         var generateStream = Stream.generate(() -> "growl!");
+
+        // takes seed/starting value as first parameter, next lambda expression
+        // Stream<Integer> oddNumbers = Stream.iterate(1,n -> n + 2);
+        // seed, predicate to specify when done, unaryOperator to get next value
+        Stream<Integer> oddNumbers = Stream.iterate(1, n -> n < 10, n -> n + 2);
+        // print stream reference
+        System.out.println(oddNumbers);
+        oddNumbers.forEach(System.out::println);
+
+        Stream<String> s12 = Stream.of("w", "o", "l", "f");
+        // first param supplier which creates the object that will store the results
+        // second BiConsumer responsible for adding one more element to the data
+        // third for taking two data collections and merging them
+        StringBuilder word2 = s12.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
+        System.out.println(word2);
+
+        Stream<String> s13 = Stream.of("w", "o", "l", "f");
+        TreeSet<String> set = s13.collect(TreeSet::new,TreeSet::add,TreeSet::addAll);
+        System.out.println(set);
+
+        Stream<String> s14 = Stream.of("w", "o", "l", "f");
+        TreeSet<String> set2 = s14.collect(Collectors.toCollection(TreeSet::new));
+        System.out.println(set2);
+
+        Stream<String> s15 = Stream.of("w", "o", "l", "f");
+        Set<String> set3 = s15.collect(Collectors.toSet());
+        System.out.println(set3);
+
+        Stream<Integer> oddNumbers2 = Stream.iterate(1,n -> n + 2);
+        oddNumbers2.skip(5).limit(2).forEach(System.out::println);
+
+        
 
     }
 }
