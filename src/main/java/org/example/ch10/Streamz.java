@@ -134,7 +134,15 @@ public class Streamz {
         Stream<Integer> oddNumbers2 = Stream.iterate(1,n -> n + 2);
         oddNumbers2.skip(5).limit(2).forEach(System.out::println);
 
-        
+        List<Integer> x1 = List.of(1,2,3);
+        List<Integer> x2 = List.of(4,5,6);
+        Stream.of(x1,x2).flatMap(x -> x.stream()).map(x -> x + 1).forEach(System.out::println);
+
+        // convert a primitive stream int a stream of boxed objects
+        IntStream s16 = IntStream.of(1,2,3);
+        Stream<Integer> boxed = s16.boxed();
+
+
 
     }
 }
