@@ -21,6 +21,8 @@ public class CheckedExceptions {
                 throw new IOException();
             }
         } catch (Exception e) {
+            System.out.println(e + "\n");
+            System.out.println(e.getMessage() + "\n");
             e.printStackTrace();
         }
     }
