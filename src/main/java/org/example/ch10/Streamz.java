@@ -154,7 +154,13 @@ public class Streamz {
         var sss = DoubleStream.of(1.2,2,4);
         sss.peek(System.out::println).filter(x -> x > 2).count();
 
-
+        Optional<String> emptyOptional = Optional.empty();
+        try {
+            String emptyValue = emptyOptional.orElseThrow(() -> new IllegalArgumentException("Value is not present"));
+            System.out.println("Empty Value: " + emptyValue);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
 
     }
 }
