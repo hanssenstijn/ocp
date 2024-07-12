@@ -142,6 +142,18 @@ public class Streamz {
         IntStream s16 = IntStream.of(1,2,3);
         Stream<Integer> boxed = s16.boxed();
 
+        // Generate a stream of constant values (e.g., "hello")
+        Stream<String> helloStream = Stream.generate(() -> "hello");
+        // Limit the stream to 2 elements and print them
+        helloStream.limit(2).forEach(System.out::println);
+
+        Predicate<String> stringPredicate = q -> q.startsWith("g");
+        var stream3 = Stream.generate(() -> "growl!");
+        System.out.println(stream3.anyMatch(stringPredicate));
+
+        var sss = DoubleStream.of(1.2,2,4);
+        sss.peek(System.out::println).filter(x -> x > 2).count();
+
 
 
     }
