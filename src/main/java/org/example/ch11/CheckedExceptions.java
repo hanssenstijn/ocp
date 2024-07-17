@@ -17,6 +17,7 @@ public class CheckedExceptions {
         }
     }
 
+    // pay close attention to the order of the catch blocks, exceptions has to become broader
     void fall2(int distance) {
         try {
             if (distance > 10) {
@@ -37,5 +38,20 @@ public class CheckedExceptions {
     public void setNumberEggs(int numberEggs) {
         if (numberEggs < 0)
             throw new IllegalArgumentException("# eggs must not be negative");
+    }
+
+    // pay attention that it is throws Exception and throw new exception
+    public void whatHeppensNext() throws IOException {
+        throw new java.io.IOException();
+    }
+
+    // runtime / unchecked can be thrown in any method
+    public void whatHeppensNext2() throws IOException {
+        throw new RuntimeException();
+    }
+
+    // runtime / unchecked can be thrown in any method
+    public void whatHeppensNext3() throws IOException {
+        throw new IllegalArgumentException();
     }
 }
