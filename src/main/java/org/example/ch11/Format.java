@@ -3,10 +3,7 @@ package org.example.ch11;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.stream.Stream;
@@ -81,6 +78,13 @@ public class Format {
         formatters.map(sss -> sss.format(7_123_456)).forEach(System.out::println);
 
         new Format().print(100_102.2);
+
+        // need single quotes
+        var fff = DateTimeFormatter.ofPattern("hh' o ''clock'");
+        // pay attention that it must include a time, so onnly date would throw runtime exception
+        System.out.println(fff.format(LocalTime.now()));
+        System.out.println(fff.format(ZonedDateTime.now()));
+        System.out.println(fff.format(LocalTime.now()));
     }
 
     public void print(double t) {
