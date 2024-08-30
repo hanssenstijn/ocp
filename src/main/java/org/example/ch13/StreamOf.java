@@ -25,5 +25,6 @@ public class StreamOf {
 
         Stream<Integer> sameNumbers = Stream.iterate(0, n -> 2);
         sameNumbers.limit(4).forEach(System.out::println);
+
     }
 }
