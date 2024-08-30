@@ -20,6 +20,10 @@ public class StreamOf {
                 .forEach(i -> ++value2[0]);
         System.out.println(value2[0]);
 
+        Stream<Integer> evenNumbers = Stream.iterate(0, n -> n + 2);
+        evenNumbers.limit(4).forEach(System.out::println);
 
+        Stream<Integer> sameNumbers = Stream.iterate(0, n -> 2);
+        sameNumbers.limit(4).forEach(System.out::println);
     }
 }
