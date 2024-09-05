@@ -24,6 +24,32 @@ public class FileFile {
         for (int i=0; i<path.getNameCount(); i ++)
             System.out.println(" Element " + i + " is " + path.getName(i));
 
+        var p = Paths.get("/mammal/omnivorre/raccoon.image");
+        System.out.println("p.subpath(0,3) : " + p.subpath(0,3));
+        System.out.println("p.subpath(1,2) : " + p.subpath(1,2));
+        System.out.println("p.subpath(1,3) : " + p.subpath(1,3));
+
+        Path path1 = Path.of("/cats/../panther");
+        Path path2 = Path.of("food");
+        System.out.println("relative path : " + path1.resolve(path2));
+
+        Path path3 = Path.of("/turkey/food");
+        System.out.println("absolute path : " + path3.resolve("/tiger/cage"));
+
+        Path p1 = Path.of("fish.txt");
+        Path p2 = Path.of("friendly/birds.txt");
+
+        // relativize method require both paths to be absolute or relative and throws an exception if the types are
+        // mixed
+        System.out.println("p1.relativize(p2) : " + p1.relativize(p2));
+        System.out.println("p2.relativize(p1) : " + p2.relativize(p1));
+
+        Path path4 = Path.of("./armadillo/../shells.txt");
+        System.out.println("path4.normalize() : " + path4.normalize());
+        Path path5 = Path.of("/cats/../panther/food");
+        System.out.println("path5.normalize() : " + path5.normalize());
+
+        System.out.println("path5.equals(path4) : " + path5.equals(path4));
     }
 
     public static void io() {
