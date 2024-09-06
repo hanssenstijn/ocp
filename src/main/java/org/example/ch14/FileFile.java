@@ -5,10 +5,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
 public class FileFile {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         File zooFile = new File("test/x/y/txt.txt");
         System.out.println("zooFile.exists() : " + zooFile.exists());
         System.out.println("zooFile.isFile() : " + zooFile.isFile());
@@ -50,6 +51,38 @@ public class FileFile {
         System.out.println("path5.normalize() : " + path5.normalize());
 
         System.out.println("path5.equals(path4) : " + path5.equals(path4));
+
+        // create a new directory /bison assuming it exists otherwise an exception is thrown
+        //Files.createDirectory(Path.of("/bison/field"));
+
+        // creates teh directory green along with any following parent directories if they do not already exist
+        // bison, field, pasture
+        // Files.createDirectories(Path.of("/bison/field/pasture/green"));
+
+        // copies file from one location to another
+        // Files.copy(Paths.get("/panda/bamboo.txt"),Paths.get("/panda-save/bamboo.txt"));
+
+        // copy directory
+        // Files.copy(Paths.get("/turtle"),Paths.get("turtleCopy"));
+
+        // The following method call will overwrite the movie.txt file if it already exists
+        // Files.copy(Paths.get("book.txt"), Paths.get("movie.txt"), StandardCopyOption.REPLACE_EXISTING);
+
+        // rename zoo directory
+        // Files.move(Path.of("C:\\zoo"),Path.of("C:\\zoo-new"));
+
+        // moves the address.txt file from the directory user to the directory zoo-new and renames it addresses2.txt
+        // Files.move(Path.of("C:\\user\\addresses.txt"),Path.of("C:\\zoo-new\\addresses2.txt"));
+
+        // file is moved within the file system as a single indivisible operation
+        // any process monitoring the file system never sees an incomplete or partially written file
+        // Files.move(Path.of("mouse.txt"),Path.of("gerbil.txt"),StandardCopyOption.ATOMIC_MOVE);
+
+        // both throw an exception if operated on a non-empty directory
+        Files.delete(Paths.get("vulture/feathers.txt"));
+        // if the pigeon directory does not exist it will not throw an exception
+        Files.deleteIfExists(Paths.get("pigeon"));
+
     }
 
     public static void io() {
@@ -84,6 +117,19 @@ public class FileFile {
                     stream.forEach(p -> System.out.println(" " + p.getName(0)));
                 }
             }
+        }
+    }
+
+    public void copyPath(Path source, Path target) {
+        try {
+            Files.copy(source,target);
+            if(Files.isDirectory(source))
+                try (Stream<Path> s = Files.list(source)) {
+                    s.forEach(p -> copyPath(p, target.resolve(p.getFileName())));
+                }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
