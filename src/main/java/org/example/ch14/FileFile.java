@@ -79,9 +79,13 @@ public class FileFile {
         // Files.move(Path.of("mouse.txt"),Path.of("gerbil.txt"),StandardCopyOption.ATOMIC_MOVE);
 
         // both throw an exception if operated on a non-empty directory
-        Files.delete(Paths.get("vulture/feathers.txt"));
+        // Files.delete(Paths.get("vulture/feathers.txt"));
         // if the pigeon directory does not exist it will not throw an exception
-        Files.deleteIfExists(Paths.get("pigeon"));
+        // Files.deleteIfExists(Paths.get("pigeon"));
+
+        // method returns -1 if the files are the same
+        // Files.mismatch(Path.of("/animals/monkey.txt"),Path.of("/animals/wolf.txt"))
+
 
     }
 
