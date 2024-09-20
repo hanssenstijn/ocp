@@ -10,6 +10,8 @@ import java.util.stream.Stream;
 
 public class FileFile {
     public static void main(String[] args) throws IOException {
+        System.out.println("test");
+
         File zooFile = new File("test/x/y/txt.txt");
         System.out.println("zooFile.exists() : " + zooFile.exists());
         System.out.println("zooFile.isFile() : " + zooFile.isFile());
