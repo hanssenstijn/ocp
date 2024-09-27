@@ -59,6 +59,10 @@ public class IOStreams {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Path.of("/weather/winter/snow.dat").toFile();
+        new File("/weather/winter/snow.dat");
+
     }
 
     // IOexception must be declared
@@ -113,4 +117,13 @@ public class IOStreams {
         // however lines returns a stream thus can use stream method immediately
         Files.lines(Paths.get("birds.txt")).filter(s -> s.length() > 2).forEach(System.out::println);
     }
+
+    private void echo() throws IOException {
+        var o = new FileWriter("new-zoo.txt");
+        try (var f = new FileReader("zoo-data.txt"); var b = new BufferedReader(f); o) {
+            o.write(b.readLine());
+        }
+        o.write("");
+    }
+
 }
