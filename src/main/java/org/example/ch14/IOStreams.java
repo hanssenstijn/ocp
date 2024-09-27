@@ -8,13 +8,63 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class IOStreams {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         try (var br = new BufferedReader(new FileReader("zoo-data.txt"))) {
             System.out.println(br.lines());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        // serialize
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("data.ser"));
+        oos.writeObject(new Gorilla());
+        oos.close();
+
+        // deserialize
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data.ser"));
+        Gorilla obj = (Gorilla) ois.readObject();
+        ois.close();
+
+        // Absolute path
+        File fileAbsolute = new File("/home/user/docs/file.txt");
+        // Relative path
+        File fileRelative = new File("file.txt");
+
+        String line;
+        var c = System.console();
+        Writer w  = c.writer();
+        try (w) {
+            if ((line = c.readLine("Enter your name: ")) != null)
+                w.append(line);
+            w.flush();
+        }
+
+        // if the code creates a directory, it will be reachable at /kang/joey
+        var path = Paths.get("/kang");
+        if(Files.isDirectory(path) && Files.isSymbolicLink(path))
+            Files.createDirectory(path.resolve("joey"));
+
+        try {
+            // Define the path to the file
+            Path filePath = Paths.get("example.txt");
+
+            // Read all lines of the file into a List<String>
+            List<String> lines = Files.readAllLines(filePath);
+
+            // Print each line
+            for (String linee : lines) {
+                System.out.println(linee);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // IOexception must be declared
+    public void removeBadFile(Path path) throws IOException {
+        if(Files.isDirectory(path))
+            System.out.println(Files.deleteIfExists(path) ? "Succes": "Try again");
     }
 
     void copyStream(InputStream in, OutputStream out) throws IOException {
